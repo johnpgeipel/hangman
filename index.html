@@ -1,51 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/solar/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/solar/bootstrap.min.css"/> -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Atari Hangman</title>
+    <style type="text/css">
+        @font-face{
+            font-family:"sf-atarian-system-bold";
+            src:url("https://cors-anywhere.herokuapp.com/https://dafonttop.com/wp-data/s/653/653/file/sf-atarian-system.bold.ttf") format("woff"),
+            url("https://cors-anywhere.herokuapp.com/https://dafonttop.com/wp-data/s/653/653/file/sf-atarian-system.bold.ttf") format("opentype"),
+            url("https://cors-anywhere.herokuapp.com/https://dafonttop.com/wp-data/s/653/653/file/sf-atarian-system.bold.ttf") format("truetype");
+        }
+        
+    </style>
+    
 </head>
 <body>
-    <div class="body-wrapper wrapper">
+    <div class="content">
+        <div class="overlay">
             <div class="jumbotron jumbotron-fluid">
                     <div class="container text-center">
-                      <h1 class="display-4">Atari</h1>
-                      <p class="lead">Something Retro.</p>
+                            <!-- <a href="https://fontmeme.com/atari-font/"><img src="https://fontmeme.com/permalink/191008/8e485056d3b2fb5ed094af32e7c9b203.png" alt="atari-font" border="0"></a> -->
+                      <h1 class="display-4">ATARI HANGMAN</h1>
+                      <p class="lead">THE 8-BIT WORD GUESS GAME</p>
                     </div>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <h2 id="gameStatus"></h2>
-                    <h4>Current Game</h4>
-                    <span id="spanSecretRandom"></span>
-                    <p>Guesses Remaining: <span id="spanNumGuesses"></span></p>
-                    <p>Letters Guessed:</p>
-                    <p><span id="spanLettersGuessed"></span></p>
-                </div>
+            <div class="container text-center">
+                    
+                <div class="row row-no-gutters">
+                
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 column">
+                            <div class="border">
+                                <div class="border-2" id="box-1">
+                                    <h2 id="gameStatus"></h2>
+                                    <h4>Current Game</h4>
+                                    <span id="spanSecretRandom"></span>
+                                    <p>Guesses Remaining: <span id="spanNumGuesses"></span></p>
+                                    <p>Letters Guessed:</p>
+                                    <p><span id="spanLettersGuessed"></span></p>
+                                </div>
+                            </div>
+                        </div>
+            
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 column">
+                                <div class="border">
+                                        <div class="border-2">
+                                            <div class="score">Wins: <span id="spanWins"></span></div>
+                                            <div class="score">Losses: <span id="spanLosses"></span></div>
+                                            <button class="btn btn-primary" type="button" onClick="newGame();">PLAY AGAIN?</button>
+                                        </div>
+                                </div>
+                            </div>
 
-                <div class="col-md-6">
-                    <div class="score">Wins: <span id="spanWins"></span></div>
-                    <div class="score">Losses: <span id="spanLosses"></span></div>
-                    <button class="btn btn-outline-primary" type="button" onClick="newGame();">PLAY AGAIN?</button>
-
-
-
-
-
-
+                        </div>
                 </div>
             </div>
+        </div>
     </div>
     <footer class="footer">
-        <div class="container">
-            <p class="footer-block text-center">Coppyright &copy; 2019 John Geipel</p>
+        
+            <p class="block text-center">Copyright &copy; 2019 John Geipel</p>
 
 
-        </div>
     </footer>
     <script type="text/javascript" src="./assets/javascript/game.js"></script>
     
