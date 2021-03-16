@@ -1,11 +1,16 @@
-html, body {
-    height: 100%;
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-
-* {
-    font-family:"sf-atarian-system-bold" !important;
-    color: white;
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: orange;
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Righteous', cursive;
+    color: #FFF;
 }
 
 p, #spanSecretRandom, .score, .lead {
@@ -19,43 +24,29 @@ p, #spanSecretRandom, .score, .lead {
     letter-spacing: 3px;
 }
 
-body {
-display: flex;
-flex-direction: column;
-background-color: orange;
-/* background-image: url("../images/wildtextures-old-paper-texture-3.png"); */
-}
-
-.jumbotron,.jumbotron-fluid {
+.jumbotron, .jumbotron-fluid {
     background: none;
     margin: 0px;
     padding: 30px 0px;
 }
 
-
-
 .content {
-flex: 1 0 auto;
+    flex: 1 0 auto;
 }
 
 .border {
-    /* border-radius: 20px; */
     background-color: darkslategrey;
 }
 
 .border-2 {
     border: 5px solid white;
-    /* border-radius: 20px; */
     padding: 20px 0px;
 }
-
-
 
 .column {
     padding: 10px; 
 }
 
 .footer {
-flex-shrink: 0;
+    flex-shrink: 0;
 }
-
